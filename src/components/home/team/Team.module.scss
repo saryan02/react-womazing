@@ -1,0 +1,50 @@
+.container {
+ width: 100%;
+  font-family: "Raleway", sans-serif;
+
+  span {
+    font-weight: 500;
+    font-size: 40px;
+  }
+}
+.content{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px ;
+  &:first-child{
+    width: 70%;
+  }
+  width: 100%;
+}
+
+
+.information {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  font-weight: 500;
+  width: 80%;
+
+  h3 {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  span {
+    font-size: 22px;
+  }
+}
+
+.link {
+  font-size: 22px;
+  color: #6E9C9F;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: #6E9C9F underline solid;
+    text-underline-offset: 4px;
+  }
+}
+//.slider{
+//  display: block;
+//}

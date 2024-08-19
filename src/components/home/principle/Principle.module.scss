@@ -1,0 +1,37 @@
+.container {
+  font-family: 'Raleway', sans-serif;
+
+  h2 {
+    font-weight: 500;
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom:100px;
+  }
+}
+
+.principles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.principle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  h3 {
+    font-size: 25px;
+    font-weight: 500;
+  }
+  img{
+    width: 61px;
+    height: 61px;
+  }
+  span {
+    align-items: center;
+    font-weight: 500;
+    font-size: 17px;
+    width: 80%;
+  }
+}

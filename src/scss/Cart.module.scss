@@ -1,0 +1,61 @@
+.root {
+  font-family: Raleway, sans-serif;
+
+  h1 {
+    font-size: 45px;
+    font-weight: 500;
+  }
+
+  .road {
+
+
+    color: #909090;
+
+    :first-child {
+      text-decoration: none;
+      color: black;
+      cursor: pointer;
+    }
+  }
+
+  .head {
+    width: 100%;
+    border-bottom: solid 1.5px #d3d3d3;
+
+    .name {
+
+      width: 50%;
+
+    }
+
+    .details {
+      width: 50%;
+
+    }
+  }
+  .execution {
+    width: 100%;
+
+
+    .button {
+      border: 1px solid;
+
+      width: 248px;
+      height: 68px;
+      flex-shrink: 0;
+    }
+
+    .total {
+
+      .sum {
+
+        padding: 20px 30px;
+        height: 68px;
+        background: #F1EADC;
+
+        border-radius: 5px;
+      }
+    }
+  }
+
+}

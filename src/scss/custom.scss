@@ -1,0 +1,63 @@
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+@import "~bootstrap/scss/bootstrap";
+
+
+.form-control {
+  border-top:none;
+  border-left:none;
+  border-right: none;
+  border-bottom: 1.5px solid #909090;
+  border-radius: 0;
+  &:focus {
+
+    outline:none;
+    box-shadow: none;
+    border-color: #F1EADC;
+  }
+
+}
+
+.btn-outline-success{
+  border-color:#6E9C9F;
+  color: #6E9C9F;
+
+  &:hover{
+    background-color: #61989d;
+    border-color: #61989d;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &.btn-outline-success:active {
+    background-color: #5aa1a6;
+    border-color: #5aa1a6;
+    color: red;
+    box-shadow: 0 0 0 0.2rem rgba(90, 161, 166, 0.56);
+  }
+}
+
+.btn-success{
+  background-color:#6E9C9F;
+
+  &:hover{
+    background-color: #20a0a6;
+    border-color: #4daaaf;
+  }
+
+  &:active {
+    background-color: #5aa1a6 !important;
+    border-color: #5aa1a6 !important;
+
+    box-shadow: 0 0 0 0.2rem rgba(90, 161, 166, 0.56) !important;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+
+}

@@ -1,0 +1,16 @@
+.root{
+  font-family: "Raleway", sans-serif;
+  h2 {
+
+    font-weight: 500;
+    font-size: 40px;
+  }
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .collections {
+    display: flex;
+   width: 100%;
+    justify-content: space-between;
+  }
+}

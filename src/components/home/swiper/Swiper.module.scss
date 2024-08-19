@@ -1,0 +1,57 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+  height: 400px;
+}
+.wrapper{
+  width: 100%;
+  height: 450px;
+
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  width: 100%;
+  font-size: 55px;
+  font-weight: 500;
+  line-height: 60.5px;
+  letter-spacing: 0.02em;
+  text-align: left;
+
+}
+
+.description {
+  display: flex;
+  width: 80%;
+  font-size: 20px;
+  text-align: right;
+  align-items: flex-start;
+
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-pagination-bullet {
+  width: 20px; /* Ширина прямоугольника */
+  height: 10px; /* Высота прямоугольника */
+  background-color: gray; /* Цвет для неактивных элементов */
+  opacity: 1; /* Устанавливаем полную непрозрачность */
+  border-radius: 0; /* Убираем закругленные углы */
+  margin: 0 5px; /* Отступы между элементами */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: black; /* Цвет для активного элемента */
+}
+
+

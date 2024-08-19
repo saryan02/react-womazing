@@ -1,0 +1,84 @@
+
+$red: #fd9696;
+$green: #b3fd96;
+$blue: #969ffd;
+$yellow: #fde596;
+$black: #000000;
+
+.root{
+  font-family: Raleway, sans-serif;
+
+  h2{
+    font-size: 45px;
+  }
+
+  .goldPrice{
+    color:#998E78
+  }
+
+
+}
+.color_buttons{
+  button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    &.active{
+      border: 2px solid #797979
+    }
+  }
+}
+.image {
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+.title {
+  //text-align: left;
+  margin-left: 90px;
+}
+
+.btn_size {
+
+  button {
+
+    border: 1px solid black;
+    width: 41px;
+    height: 41px;
+    background-color: white;
+    color: black;
+    transition: .5s ease;
+
+    &.active {
+      background-color: black;
+      color: white;
+      transition: .5s ease;
+
+    }
+  }
+}
+
+.end_section{
+  input{
+    width:68px;
+    height: 68px;
+    border-radius:0;
+    text-align: center;
+  }
+  button{
+    cursor:pointer;
+    width: 268px;
+    height: 68px;
+    color:white;
+    background-color: #6E9C9F;
+    font-size: 17px;
+    border:none;
+  }
+}
+
+
+

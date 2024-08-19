@@ -1,0 +1,86 @@
+.root {
+
+  margin: 0 auto;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-left: 10px;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+  }
+
+  .rights {
+    width: 204px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+}
+
+.center {
+
+  .sections {
+    font-weight: 400;
+    font-size: 15px;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .clothes {
+
+    li {
+      list-style-type: none;
+      font-size: 13px;
+      font-weight: 400;
+
+    }
+
+    ul {
+      line-height: 25px;
+      margin-left: 17%;
+    }
+  }
+}
+
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  .contacts {
+    width: 158px;
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  .social {
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+
+  }
+}
+
+.footer{
+
+}

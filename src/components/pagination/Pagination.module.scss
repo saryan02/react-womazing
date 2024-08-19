@@ -1,0 +1,35 @@
+.root {
+  margin: 0 auto;
+  li {
+    display: inline-flex;
+
+    a {
+      cursor: pointer;
+      width: 41px;
+      height: 41px;
+      margin-right: 10px;
+      border: 1px solid black;
+      color: black;
+      align-items: flex-start;
+      justify-content: center;
+      text-align: center;
+      line-height: 42px;
+
+    }
+  }
+
+
+  :global {
+    .selected {
+
+      a {
+        background-color: black;
+        color: white;
+      }
+      color:white;
+
+    }
+
+  }
+
+}
