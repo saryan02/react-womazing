@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
             <div className=' d-flex justify-content-between container flex-column-reverse align-items-center flex-md-row gap-4 gap-md-0 align-items-md-start px-5 py-5'>
                 <div className='d-flex align-items-center align-items-md-start flex-column gap-5'>
                     <div>
-                        <img src={dress} alt='logo_dress'/>
+                        <img className={styles.logo} src={dress} alt='logo_dress'/>
                         <span>WOMAZING</span>
                     </div>
                     <div >
@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
                         <span>+7 (495) 823-54-12</span>
                         <span>hello@womazing.com</span>
                     </div>
-                    <div className='d-flex gap-2'>
+                    <div className={`${styles.social} d-flex gap-2 `}>
                         <img src={twitter} alt='twitter' />
                         <img src={facebook} alt='facebook'/>
                         <img src={inst} alt='instagram' />
