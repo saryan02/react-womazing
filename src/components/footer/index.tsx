@@ -6,54 +6,69 @@ import facebook from '../../assets/img/footer/facebook.svg'
 import twitter from '../../assets/img/footer/twitter.svg'
 import pay from '../../assets/img/footer/visa-mastercard.png'
 
+
 const Footer: React.FC = () => {
-    const sections = ['Главная', 'Магазин', 'О бренде', 'Контакты']
-    const clothes = ['Пальто', 'Свитшоты', 'Кардиганы', 'Толстовки']
+    const menuSections = [
+        {title: 'Главная'},
+        {
+            title: 'Магазин',
+            subItems: ['Пальто', 'Свитшоты', 'Кардиганы', 'Толстовки']
+
+        },
+        {title: 'О бренде'},
+        {title: 'Контакты'}
+    ]
     return (
-        <div className={styles.root}>
-            <div className={styles.left}>
-                <div className={styles.logo}>
-                    <img src={dress} alt="logo"/>
-                    <span>WOMAZING</span>
+
+        <div className={` ${styles.root}`}>
+            <div className=' d-flex justify-content-between container flex-column-reverse align-items-center flex-md-row gap-4 gap-md-0 align-items-md-start px-5 py-5'>
+                <div className='d-flex align-items-center align-items-md-start flex-column gap-5'>
+                    <div>
+                        <img src={dress} alt='logo_dress'/>
+                        <span>WOMAZING</span>
+                    </div>
+                    <div >
+                        <span>&copy; Все права защищены <br/> Политика конфиденциальности <br/> Публичная оферта</span>
+                    </div>
                 </div>
-                <span className={styles.rights}>&copy; Все права защищены
-                Политика конфиденциальности
-                Публичная оферта</span>
-            </div>
-            <div className={styles.center}>
-                <div className={styles.sections}>{
-                    sections.map((obj, index) => (
-                        <span key={index}>
-                            {obj}
-                        </span>
-                    ))
-                }
-                </div>
-                <div className={styles.clothes}>
-                    <ul>
-                        {
-                            clothes.map((obj, index) => (
-                                <li key={index}>
-                                    {obj}
+                <div className={`d-none d-lg-block ${styles.center}`}>
+                    <nav className="menu">
+                        <ul className="nav">
+                            {menuSections.map((section, index) => (
+                                <li className="nav-item" key={index}>
+                                    <a href='#'
+                                       className={`${styles.sectionsName} nav-link ${index === 0 ? 'active' : ''}`}>
+                                        {section.title}
+                                    </a>
+                                    {section.subItems && (
+                                        <ul className="sub-items">
+                                            {section.subItems.map((item, subIndex) => (
+
+                                                <li className={`sub-item ${styles.subitem}`} key={subIndex}>
+                                                    {item}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
                                 </li>
-                            ))
+                            ))}
+                        </ul>
+                    </nav>
 
-                        }
-                    </ul>
                 </div>
-            </div>
-            <div className={styles.right}>
-                <div className={styles.contacts}>
-                    <span>+7 (495) 823-54-12 hello@womazing.com</span>
-                </div>
-                <div className={styles.social}>
-                    <img src={inst} alt="inst"/>
-                    <img src={facebook} alt="facebook"/>
-                    <img src={twitter} alt="twitter"/>
-                </div>
+                <div className='d-flex flex-column align-items-center align-items-md-start gap-4'>
+                    <div className='d-flex flex-column'>
+                        <span>+7 (495) 823-54-12</span>
+                        <span>hello@womazing.com</span>
+                    </div>
+                    <div className='d-flex gap-2'>
+                        <img src={twitter} alt='twitter' />
+                        <img src={facebook} alt='facebook'/>
+                        <img src={inst} alt='instagram' />
+                    </div>
 
-                <img src={pay} alt='pay'/>
-
+                        <img className={styles.pay} src={pay} alt='pay' />
+                </div>
             </div>
         </div>
     )

@@ -3,6 +3,7 @@ import React, {useState} from "react";
 import styles from '../scss/Contacts.module.scss'
 import '../scss/custom.scss'
 import {YMaps, Map, Placemark, Panorama} from '@pbe/react-yandex-maps';
+import Footer from "../components/footer";
 
 
 const Contacts: React.FC = () => {
@@ -15,8 +16,11 @@ const Contacts: React.FC = () => {
         setShow(false)
     }
     return (
+        <>
+            <div className={'container'}>
+                <Header/>
+            </div>
         <div className={`container d-flex flex-column my-5 ${styles.root}`}>
-            {/*<Header/>*/}
             <div className={'my-5'}>
                 <h1 className={''}>Контакты</h1>
                 <div className={`${styles.road}`}>
@@ -94,7 +98,8 @@ const Contacts: React.FC = () => {
                 </div>
             </div>
         </div>
-
+            <Footer/>
+</>
     )
 }
 

@@ -11,11 +11,13 @@
   }
 
   .btn_shop{
+      border: 1px solid;
 
-      color:white;
-      width:260px;
+      width: 248px;
       height: 68px;
-      background-color: green;
+      flex-shrink: 0;
+    color: white;
+
   }
 
   .road{

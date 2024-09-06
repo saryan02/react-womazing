@@ -33,39 +33,42 @@ const Shop: React.FC = () => {
     }, [pageNumber, categoryId]);
 
     return (
-        <div className={`container ${styles.root} `}>
-            <div className={''}>
-                {/*<Header/>*/}
-                <div className='d-flex flex-column gap-5'>
-                    <div className={`d-flex flex-column align-items-center d-md-block ${styles.name_section}`}>
-                        <span>Магазин</span>
-                        <div className={styles.road}>
-                            <Link to="/"> <span> Главная — </span></Link>
+        <>
+            <div className={`container ${styles.root} `}>
+                <div className={''}>
+                    <Header/>
+                    <div className='d-flex flex-column gap-5'>
+                        <div className={`d-flex flex-column align-items-center d-md-block ${styles.name_section}`}>
                             <span>Магазин</span>
+                            <div className={styles.road}>
+                                <Link to="/"> <span> Главная — </span></Link>
+                                <span>Магазин</span>
+                            </div>
                         </div>
-                    </div>
-                    <Categories value={categoryId} onClickButton={onClickCategory}/>
+                        <Categories value={categoryId} onClickButton={onClickCategory}/>
 
-                    <div className={` ${styles.items}`}>
-                        {clothes.map((obj, index) => (
-                            <Link className={styles.link} key={obj.id} to={`/cloth/${obj.id}`}>
-                            <Item
-                                key={index}
-                                name={obj.name}
-                                price={obj.price}
-                                prevPrice={obj.previously_price}
-                                image={obj.image}
-                            />
-                            </Link>
-                        ))}
+                        <div className={` ${styles.items}`}>
+                            {clothes.map((obj, index) => (
+                                <Link className={styles.link} key={obj.id} to={`/cloth/${obj.id}`}>
+                                    <Item
+                                        key={index}
+                                        name={obj.name}
+                                        price={obj.price}
+                                        prevPrice={obj.previously_price}
+                                        image={obj.image}
+                                    />
+                                </Link>
+                            ))}
+                        </div>
+
+                        <Pagination count={clothes.length > 0 ? clothes[0].totalcount : 0} onChange={onChangePage}/>
                     </div>
 
-                    <Pagination count={clothes.length > 0 ? clothes[0].totalcount : 0} onChange={onChangePage}/>
                 </div>
 
             </div>
-
-        </div>
+            <Footer/>
+        </>
     );
 };
 

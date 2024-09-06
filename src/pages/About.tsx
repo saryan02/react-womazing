@@ -9,8 +9,12 @@ import {Link} from "react-router-dom";
 const About = () => {
 
     return (
+        <>
+            <div className={'container'}>
+                <Header/>
+            </div>
         <div className={`container gx-5 my-5 d-flex flex-column text-center text-md-start align-items-center ${styles.root}`}>
-            {/*<Header/>*/}
+
             <div className={'row d-flex flex-row'}>
 
                 <div className={'my-5'}>
@@ -51,9 +55,11 @@ const About = () => {
 
             </div>
 
-            <button className={` btn mb-5 ${styles.btn_shop}`}> Перейти в магазин</button>
-            {/*<Footer/>*/}
+            <button className={` btn-success mb-5 ${styles.btn_shop}`}> Перейти в магазин</button>
+
         </div>
+            <Footer/>
+            </>
     )
 }
 
