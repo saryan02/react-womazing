@@ -1,29 +1,22 @@
 .container {
- width: 100%;
+ //width: 100%;
   font-family: "Raleway", sans-serif;
 
   span {
     font-weight: 500;
     font-size: 40px;
   }
+
 }
-.content{
-  display: flex;
-  justify-content: space-between;
-  margin-top: 50px ;
-  &:first-child{
-    width: 70%;
-  }
-  width: 100%;
-}
+
+
 
 
 .information {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
+  height: 400px;
+  overflow: hidden;
   font-weight: 500;
-  width: 80%;
+
 
   h3 {
     font-size: 30px;
@@ -45,6 +38,15 @@
     text-underline-offset: 4px;
   }
 }
-//.slider{
-//  display: block;
-//}
+
+@media screen and (max-width: 770px){
+  .container{
+    img{
+      height: 65vh;
+      width: 95vw;
+      overflow: hidden;
+    }
+
+  }
+
+}

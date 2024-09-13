@@ -14,16 +14,6 @@ import {useDispatch} from "react-redux";
 import {fetchClothes} from "../redux/slices/cloth/slice";
 import {inspect} from "util";
 
-interface CollectionProps {
-    id: number,
-    name: string,
-    price: number,
-    prevPrice: number | null,
-    size: string[],
-    color: string[],
-    image: string
-
-}
 
 const Home: React.FC = () => {
 
@@ -32,7 +22,6 @@ const Home: React.FC = () => {
 
     useEffect(() => {
         const fetch = async () => {
-            ////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
             // @ts-ignore
             dispatch(fetchClothes('/home'))
@@ -41,16 +30,10 @@ const Home: React.FC = () => {
     }, [])
 
 
-    return (
-        <div className="home">
-
-            <div className="main_section">
-
-                <br/>
-                <div className="wrapper">
-
-                    <Header/>
-
+    return (<>
+            <Header/>
+            <div className={' d-flex gap-5 flex-column'}>
+                <div className="main_section ">
                     <div className="information">
                         <div className="information__left">
                             <Swiper/>
@@ -66,39 +49,41 @@ const Home: React.FC = () => {
                                 <button>Открыть магазин</button>
                             </div>
                         </div>
-                        <div className="information__right">
+                        <div className="information__right d-none  d-lg-block ">
                             <img className="first_women" src={picMain} alt="главная вумен"/>
                             <img className='second_women' src={picSecond} alt="второстепенная вумен"/>
                             <img className='third_women' src={picThird} alt="третьестепенная вумен"/>
                         </div>
 
                     </div>
-                </div>
-            </div>
 
-                <div className="wrapper">
+                </div>
+
+                <div className='container d-flex flex-column gap-5 mb-5'>
                     <Principle/>
-                </div>
-
-            <div className="block_width">
-                <div className="wrapper">
                     <Collection/>
-                </div>
-            </div>
-
-            <div className='block_width'>
-                <div className="wrapper">
                     <Team/>
                 </div>
-            </div>
 
 
-            <div className="footer">
-                <div className='wrapper'>
-                    <Footer/>
-                </div>
+                {/*<div className="wrapper">*/}
+                {/*    <Principle/>*/}
+                {/*</div>*/}
+
+                {/*<div className="block_width">*/}
+                {/*    <div className="wrapper">*/}
+                {/*        <Collection/>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
+
+                {/*<div className='block_width'>*/}
+                {/*    <div className="wrapper">*/}
+                {/*        <Team/>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
             </div>
-        </div>
+            <Footer/>
+        </>
     )
 }
 

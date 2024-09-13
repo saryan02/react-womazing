@@ -11,7 +11,6 @@ interface CollectionItemProps {
 
 const Item: React.FC<CollectionItemProps> = ({name, price, prevPrice, image}) => {
 
-    console.log(image)
     return (
 
         <div className={styles.root}>

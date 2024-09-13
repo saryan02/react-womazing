@@ -25,13 +25,13 @@ const Index: React.FC = () => {
     ]
 
     return (
-        <div className={styles.container}>
+        <div className={` ${styles.container} container d-flex flex-column align-items-center align-items-md-start`}>
             <h2>Что для нас важно</h2>
 
 
-            <div className={styles.principles}>
+            <div className='d-flex justify-content-between flex-column align-items-center gap-5 align-items-lg-start flex-lg-row'>
                 {principles.map((obj, index) => (
-                    <div className={styles.principle} key={index}>
+                    <div className={`${styles.principle} d-flex flex-column align-items-center text-lg-start text-center `} key={index}>
                         <img src={obj.img} alt='принцип'/>
                         <h3>{obj.title}</h3>
                         <span>{obj.description}</span>

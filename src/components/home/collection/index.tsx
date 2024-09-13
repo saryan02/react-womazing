@@ -1,22 +1,12 @@
 import React from 'react'
 import styles from "./Collection.module.scss"
 import Item from "../../collectionItem";
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 import {RootState} from "../../../redux/store";
 
-interface CollectionProps {
-    id: number,
-    name: string,
-    price: number,
-    prevPrice: number,
-    size: string[],
-    color: string[],
-    image: string
 
-}
 
 const Collection: React.FC = () => {
-    const dispatch = useDispatch()
     const clothes = useSelector((state: RootState) => state.clothSlice.items)
 
     const collections = clothes.map((obj, index) => (
@@ -24,9 +14,9 @@ const Collection: React.FC = () => {
               image={obj.image}/>
     ))
     return (<>
-        <div className={styles.root}>
+        <div className={`d-flex flex-column align-items-center align-items-md-start ${styles.root}`}>
             <h2>Новая коллекция</h2>
-            <div className={styles.collections}>
+            <div className='mt-3 d-flex  gap-0 w-100 justify-content-around flex-column  flex-lg-row'>
                 {
                     collections
                 }

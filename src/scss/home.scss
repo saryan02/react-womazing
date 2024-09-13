@@ -1,19 +1,18 @@
 .main_section {
-  background: linear-gradient(to right, white 60%, #F1EADC 40%);
+
   height: 100%;
-  padding-bottom: 170px;
   width: 100%;
 
 }
 
-.wrapper {
-  padding-left: 150px;
-  padding-right: 150px;
-
-  height: 100%;
-  margin: 0 auto;
-
-}
+//.wrapper {
+//  padding-left: 150px;
+//  padding-right: 150px;
+//
+//  height: 100%;
+//  margin: 0 auto;
+//
+//}
 
 .buttons {
   display: flex;
@@ -33,17 +32,24 @@
 
   display: flex;
   justify-content: space-between;
-  margin-top: 5%;
+
 
   &__left {
     display: inherit;
     flex-direction: column;
     max-width: 50%;
     align-items: center;
+    background-color: white;
+    margin-top: 5%;
   }
 
   &__right {
+
+    width: 40%;
+    height: 100vh;
+    background: #F1EADC;
     position: relative;
+
   }
 
 }
@@ -51,26 +57,27 @@
 
 .first_women {
   position: absolute;
-  width: 330px;
-  right: 10px;
-  top: 0;
+  width: 25.5vw;
+  right: 100px;
+  top: 100px;
   z-index: 1;
 }
 
 .second_women {
 
   position: absolute;
-  top: 10%;
-  left: -100px;
-  width: 200px;
+  top: 170px;
+  right: 0;
+  width: 14.5vw;
   z-index: 2;
 }
 
 .third_women {
 
   position: absolute;
-  top: 250px;
-  right: 220px;
+  top: 350px;
+  width: 14.5vw;
+  right: 330px;
   z-index: 3;
 }
 
@@ -90,6 +97,14 @@
 
 }
 
-.block_width{
+.block_width {
   width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .information {
+    &__left{
+      max-width: 100%;
+    }
+  }
 }
