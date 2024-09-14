@@ -2,7 +2,7 @@ import Header from "../components/header/Header";
 import React, {useState} from "react";
 import styles from '../scss/Contacts.module.scss'
 import '../scss/custom.scss'
-import {YMaps, Map, Placemark, Panorama} from '@pbe/react-yandex-maps';
+import {YMaps, Map, Placemark} from '@pbe/react-yandex-maps';
 import Footer from "../components/footer";
 
 
@@ -17,9 +17,9 @@ const Contacts: React.FC = () => {
     }
     return (
         <>
-            <div className={'container'}>
+
                 <Header/>
-            </div>
+
         <div className={`container d-flex flex-column my-5 ${styles.root}`}>
             <div className={'my-5'}>
                 <h1 className={''}>Контакты</h1>
@@ -57,10 +57,10 @@ const Contacts: React.FC = () => {
                         <span>г. Москва, 3-я улица Строителей, 25</span>
                     </div>
                 </div>
-                <span>Напишите нам</span>
 
-                <div className={` d-flex justify-content-center align-items-center ${styles.feedback}`}>
 
+                <div className={` ${styles.feedback} d-flex flex-column gap-2  align-items-md-start align-items-center `}>
+                    <span>Напишите нам</span>
                     <form className={''} onSubmit={openAlert}>
 
                         <div className="input-group mb-3">
@@ -84,7 +84,7 @@ const Contacts: React.FC = () => {
                         <textarea className="form-control" placeholder='Сообщение' aria-label="With textarea"
                                   required></textarea>
                         </div>
-                        <button className={'btn btn-primary'}>Отпправить форму</button>
+                        <button className={'btn btn-success mt-3'}>Отпправить форму</button>
                     </form>
                     {show
                         &&
