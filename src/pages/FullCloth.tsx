@@ -9,6 +9,7 @@ import Header from '../components/header/Header'
 import Footer from '../components/footer/index';
 import {useDispatch, useSelector} from "react-redux";
 import {addItem as item} from "../redux/slices/cart/slice"
+import {selectItems} from "../redux/slices/cart/selectors";
 
 
 export type ClothType = {
@@ -28,7 +29,7 @@ const FullCloth: React.FC = () => {
     const [sizeId, setSizeId] = useState(0);
     const [colorId, setColor] = useState(0);
     const dispatch = useDispatch()
-    const cartItem = useSelector((state: RootState) => state.cartSlice.items)
+    const cartItem = useSelector(selectItems)
 
     const onClickSize = (index: number) => {
         setSizeId(index);

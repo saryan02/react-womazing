@@ -6,6 +6,8 @@ import {Link, useLocation} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {setPageId} from "../../redux/slices/header/slice";
 import {RootState} from "../../redux/store";
+import {selectItems} from "../../redux/slices/cart/selectors";
+import {selectPageLink} from "../../redux/slices/header/selectors";
 
 
 type HeaderProps = {
@@ -16,10 +18,10 @@ type HeaderProps = {
 const Header: React.FC = () => {
     const menuList = ["Главная", "Магазин", "О бренде", "Контакты"];
     const dispatch = useDispatch()
-    const pageLink = useSelector((state: RootState) => (state.headerSlice.pageLink))
+    const pageLink = useSelector(selectPageLink)
     const location = useLocation();
     const isMounted = React.useRef(false)
-    const items = useSelector((state: RootState) => state.cartSlice.items)
+    const items = useSelector(selectItems)
 
 
     useEffect(() => {

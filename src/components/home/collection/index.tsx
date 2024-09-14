@@ -3,11 +3,12 @@ import styles from "./Collection.module.scss"
 import Item from "../../collectionItem";
 import {useSelector} from "react-redux";
 import {RootState} from "../../../redux/store";
+import {selectCloth} from "../../../redux/slices/cloth/selectors";
 
 
 
 const Collection: React.FC = () => {
-    const clothes = useSelector((state: RootState) => state.clothSlice.items)
+    const clothes = useSelector(selectCloth)
 
     const collections = clothes.map((obj, index) => (
         <Item key={index} name={obj.name} price={obj.price} prevPrice={obj.previously_price}

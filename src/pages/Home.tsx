@@ -8,22 +8,23 @@ import picSecond from "../assets/img/home/main/photosecond.png"
 import picThird from "../assets/img/home/main/photothird.png"
 import Team from "../components/home/team";
 import Footer from "../components/footer";
-import axios from 'axios'
+
 import Collection from "../components/home/collection";
 import {useDispatch} from "react-redux";
 import {fetchClothes} from "../redux/slices/cloth/slice";
-import {inspect} from "util";
+import {AppDispatch} from "../redux/store";
+
 
 
 const Home: React.FC = () => {
 
-    const dispatch = useDispatch()
+    const dispatch = useDispatch<AppDispatch>()
 
 
     useEffect(() => {
         const fetch = async () => {
 
-            // @ts-ignore
+
             dispatch(fetchClothes('/home'))
         }
         fetch()

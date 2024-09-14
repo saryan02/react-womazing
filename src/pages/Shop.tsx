@@ -4,17 +4,19 @@ import styles from "../scss/Shop.module.scss";
 import {Link} from "react-router-dom";
 import Categories from "../components/shop/categories";
 import {useDispatch, useSelector} from "react-redux";
-import {RootState} from "../redux/store";
+import {AppDispatch, RootState} from "../redux/store";
 import {setCategoryId, setPageNumber} from "../redux/slices/sort/slice";
 import Item from "../components/collectionItem";
 import {fetchClothes} from "../redux/slices/cloth/slice";
 import Pagination from "../components/pagination";
 import Footer from "../components/footer";
+import {selectCloth} from "../redux/slices/cloth/selectors";
+import {selectSort} from "../redux/slices/sort/selectors";
 
 const Shop: React.FC = () => {
-    const dispatch = useDispatch();
-    const {categoryId, pageNumber} = useSelector((state: RootState) => state.sortSlice);
-    const clothes = useSelector((state: RootState) => state.clothSlice.items);
+    const dispatch = useDispatch<AppDispatch>();
+    const {categoryId, pageNumber} = useSelector(selectSort);
+    const clothes = useSelector(selectCloth);
 
     const onClickCategory = (index: number) => {
         dispatch(setCategoryId(index));
@@ -27,7 +29,7 @@ const Shop: React.FC = () => {
 
     useEffect(() => {
 
-        // @ts-ignore
+
         dispatch(fetchClothes(`/catalog?page=${pageNumber}&limit=9&category=${categoryId}`));
 
     }, [pageNumber, categoryId]);
